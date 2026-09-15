@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:gravity="center_vertical"
+    android:background="?attr/selectableItemBackground">
+
+    <!-- Иконка «держать и тащить» -->
+    <TextView
+        android:id="@+id/text_drag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="☰"
+        android:textSize="20sp"
+        android:paddingEnd="12dp"
+        android:paddingStart="4dp"
+        android:alpha="0.6" />
+
+    <!-- Порядковый номер -->
+    <TextView
+        android:id="@+id/text_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1."
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:paddingEnd="8dp" />
+
+    <!-- Кликабельный блок с названием -->
+    <LinearLayout
+        android:id="@+id/name_row"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="false">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:text="Название тренировки" />
+
+            <TextView
+                android:id="@+id/text_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:alpha="0.6"
+                android:text="0 упражнений" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Кнопка редактирования — жёлтая -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_edit"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="6dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:layout_marginEnd="4dp"
+        app:icon="@android:drawable/ic_menu_edit"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="18dp"
+        app:iconTint="@color/icon_on_colored"
+        app:backgroundTint="@color/yellow_copy"
+        app:cornerRadius="8dp" />
+
+    <!-- Кнопка удаления — красная -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/button_delete"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:minWidth="0dp"
+        android:minHeight="0dp"
+        android:padding="6dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:icon="@android:drawable/ic_menu_delete"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="18dp"
+        app:iconTint="@color/icon_on_colored"
+        app:backgroundTint="@color/red_delete"
+        app:cornerRadius="8dp" />
+
+</LinearLayout>

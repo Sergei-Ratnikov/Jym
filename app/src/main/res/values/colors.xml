@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green_finish">#4CAF50</color>
+    <color name="yellow_copy">#cfb43c</color>
+    <color name="red_delete">#fd7c6e</color>
+    <color name="primary_blue">#1ca9c9</color>
+    <color name="primary_green">#66cca8</color>
+    <color name="back_wall">#F8FAFC</color>
+    <color name="header_gray">#0F172A</color>
+    <color name="icon_on_colored">#FFFFFFFF</color>
+
+</resources>

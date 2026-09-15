@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingStart="16dp"
+    android:paddingEnd="16dp"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!--
+      Строка с названием.
+      clickable=true — поглощает клики по всей ширине строки.
+      Но слушателя в коде на эту обёртку НЕ вешаем — только на text_name.
+      Поэтому клик по пустому месту справа ничего не делает.
+    -->
+    <LinearLayout
+        android:id="@+id/name_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:clickable="true"
+        android:focusable="false">
+
+        <!-- Кликабельный текст названия (обработчик вешается в адаптере) -->
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="6dp"
+            android:paddingBottom="6dp"
+            android:textSize="16sp"
+            android:text="Название упражнения" />
+
+    </LinearLayout>
+
+    <!-- Блок полей ввода (только для активных) -->
+    <LinearLayout
+        android:id="@+id/layout_fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="4dp"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <!-- Тип 1: вес + повторы + подходы -->
+        <LinearLayout
+            android:id="@+id/fields_type1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edit_weight"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:hint="кг" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" кг × "
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_reps"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:hint="повт." />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" × "
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_sets"
+                android:layout_width="45dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="14sp"
+                android:hint="подх." />
+
+            <ImageButton
+                android:id="@+id/button_plus_sets"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="4dp"
+                android:layout_marginStart="2dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_input_add"
+                android:contentDescription="+1 подход" />
+
+        </LinearLayout>
+
+        <!-- Тип 2: список подходов (10, 10, 9, 8) -->
+        <LinearLayout
+            android:id="@+id/fields_type2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <!-- Контейнер с полями подходов. Наполняется программно. -->
+            <LinearLayout
+                android:id="@+id/reps_container"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:gravity="center_vertical" />
+
+            <ImageButton
+                android:id="@+id/button_add_rep"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="4dp"
+                android:layout_marginStart="2dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_input_add"
+                android:contentDescription="+1 подход" />
+
+        </LinearLayout>
+
+        <!-- Тип 3: время (мин:сек) + подходы -->
+        <LinearLayout
+            android:id="@+id/fields_type3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edit_time_min"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textSize="14sp"
+                android:hint="мин" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" мин "
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_time_sec"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="14sp"
+                android:hint="с" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" с × "
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_sets3"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="14sp"
+                android:hint="подх." />
+
+            <ImageButton
+                android:id="@+id/button_plus_sets3"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:padding="4dp"
+                android:layout_marginStart="2dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_input_add"
+                android:contentDescription="+1 подход" />
+
+        </LinearLayout>
+
+        <!-- Тип 4: расстояние + время (мин:сек) + уровень -->
+        <LinearLayout
+            android:id="@+id/fields_type4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <!-- 1. Расстояние -->
+            <EditText
+                android:id="@+id/edit_distance"
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:hint="м" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" м × "
+                android:textSize="14sp" />
+
+            <!-- 2. Время: мин + сек -->
+            <EditText
+                android:id="@+id/edit_time4_min"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="3"
+                android:textSize="14sp"
+                android:hint="мин" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" мин "
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/edit_time4_sec"
+                android:layout_width="44dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="2"
+                android:textSize="14sp"
+                android:hint="с" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" с × "
+                android:textSize="14sp" />
+
+            <!-- 3. Уровень -->
+            <EditText
+                android:id="@+id/edit_level"
+                android:layout_width="56dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:hint="ур" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" ур"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Неактивный текст со значениями -->
+    <TextView
+        android:id="@+id/text_values"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="13sp"
+        android:alpha="0.7"
+        android:layout_marginTop="2dp"
+        android:visibility="gone"
+        android:text="80 кг × 10 × 4" />
+
+</LinearLayout>
