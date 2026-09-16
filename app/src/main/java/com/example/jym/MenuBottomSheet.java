@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -62,16 +61,16 @@ public class MenuBottomSheet extends BottomSheetDialogFragment {
      * Иначе — вешает обработчик клика.
      */
     private void bindItem(View root, int viewId, MainActivity.Screen screen) {
-        TextView tv = root.findViewById(viewId);
+        // Теперь это LinearLayout (строка меню целиком).
+        View row = root.findViewById(viewId);
 
         if (screen == currentScreen) {
-            // Текущий экран — серый, кликнуть нельзя.
-            tv.setEnabled(false);
-            tv.setAlpha(0.4f);
+            row.setEnabled(false);
+            row.setAlpha(0.4f);
         } else {
-            tv.setOnClickListener(v -> {
+            row.setOnClickListener(v -> {
                 listener.onSelected(screen);
-                dismiss(); // закрываем меню
+                dismiss();
             });
         }
     }

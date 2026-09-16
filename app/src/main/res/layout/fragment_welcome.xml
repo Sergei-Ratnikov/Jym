@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--
+      Фоновая картинка на весь экран.
+      alpha="0.15" — прозрачность 15% (еле заметная).
+      Можно поднять до 0.2–0.3, если хочется виднее.
+    -->
+    <ImageView
+        android:id="@+id/image_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="45dp"
+        android:src="@drawable/coat_of_arms"
+        android:scaleType="centerInside"
+        android:alpha="0.05"
+        android:contentDescription="" />
+
+    <!--
+      Контент поверх картинки.
+      LinearLayout с gravity="center" ставит всё по центру.
+    -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="32dp"
+        android:gravity="center">
+
+        <Space
+            android:layout_width="340dp"
+            android:layout_height="8dp"
+            android:layout_weight="0.3" />
+
+        <!-- Заголовок -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Jym"
+            android:textSize="32sp"
+            android:textStyle="bold" />
+
+
+        <!-- Основной текст -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:lineSpacingMultiplier="1.1"
+            android:textSize="18sp"
+            android:text="Привет!\nЭто трекер тренировок, который работает без интернета и регистрации. Создавай упражнения, собирай из них тренировки и веди историю — всё хранится только на твоём телефоне.\nНачни с раздела «Упражнения» — там уже есть начальный набор. Затем собери тренировки по себе и приступай!\n\nСоблюдает дня режим Jym!"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <!-- Галочка «Больше не показывать» -->
+        <CheckBox
+            android:id="@+id/check_dont_show"
+            android:layout_width="wrap_content"
+            android:layout_height="23dp"
+            android:layout_gravity="center"
+            android:text="Больше не показывать"
+            android:textSize="12sp" />
+
+        <!-- Кнопка «Начать» -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Начать!"
+            android:textSize="16sp"
+            android:paddingTop="12dp"
+            android:paddingBottom="12dp"
+            app:backgroundTint="@color/primary_green" />
+
+    </LinearLayout>
+
+</FrameLayout>

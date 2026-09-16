@@ -14,7 +14,7 @@ import com.example.jym.ui.training.TrainingFragment;
 import com.example.jym.ui.sets.SetEditorFragment;
 
 import com.example.jym.data.Repository;
-
+import com.example.jym.ui.welcome.WelcomeFragment;
 import android.view.View;
 /**
  * Главная (и единственная) Activity приложения.
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
      * Используется в меню для навигации.
      */
     public enum Screen {
+        WELCOME,      // экран приветствия
         TRAINING,     // экран тренировки
         EXERCISES,    // экран упражнений
         SETS,         // экран сетов
@@ -54,11 +55,14 @@ public class MainActivity extends AppCompatActivity {
         Button buttonMenu = findViewById(R.id.button_menu);
         buttonMenu.setOnClickListener(v -> openMenu());
 
-        // При первом запуске показываем экран Тренировки.
-        // savedState == null означает, что Activity запущена впервые
-        // (а не пересоздана после поворота экрана).
+        // При первом запуске: если надо — показываем приветствие,
+        // иначе — сразу экран тренировки.
         if (savedInstanceState == null) {
-            showScreen(Screen.TRAINING);
+            if (WelcomeFragment.shouldShow(this)) {
+                showScreen(Screen.WELCOME);
+            } else {
+                showScreen(Screen.TRAINING);
+            }
         }
     }
 
@@ -78,13 +82,35 @@ public class MainActivity extends AppCompatActivity {
     public void showScreen(Screen screen) {
         currentScreen = screen;
 
-        Fragment fragment = switch (screen) {
-            case EXERCISES -> new ExercisesFragment();
-            case SETS -> new SetsFragment();
-            case HISTORY -> new HistoryFragment();
-            case STATISTICS -> new StatisticsFragment();
-            default -> new TrainingFragment();
-        };
+        Fragment fragment;
+        switch (screen) {
+            case WELCOME:
+                fragment = new WelcomeFragment();
+                break;
+            case EXERCISES:
+                fragment = new ExercisesFragment();
+                break;
+            case SETS:
+                fragment = new SetsFragment();
+                break;
+            case HISTORY:
+                fragment = new HistoryFragment();
+                break;
+            case STATISTICS:
+                fragment = new StatisticsFragment();
+                break;
+            case TRAINING:
+            default:
+                fragment = new TrainingFragment();
+                break;
+        }
+
+        // Скрываем нижнюю панель с меню на экране приветствия.
+        View bottomPanel = findViewById(R.id.bottom_panel);
+        if (bottomPanel != null) {
+            bottomPanel.setVisibility(
+                    screen == Screen.WELCOME ? View.GONE : View.VISIBLE);
+        }
 
         // Заменяем содержимое контейнера на новый фрагмент.
         getSupportFragmentManager()

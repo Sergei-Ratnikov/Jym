@@ -6,49 +6,129 @@
     android:paddingTop="8dp"
     android:paddingBottom="8dp">
 
-    <TextView
+    <!-- Текущая тренировка -->
+    <LinearLayout
         android:id="@+id/menu_training"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="18dp"
-        android:textSize="18sp"
-        android:background="?attr/selectableItemBackground"
-        android:text="🏋  Текущая тренировка" />
+        android:background="?attr/selectableItemBackground">
 
-    <TextView
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_training"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Текущая тренировка" />
+
+    </LinearLayout>
+
+    <!-- Упражнения -->
+    <LinearLayout
         android:id="@+id/menu_exercises"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="18dp"
-        android:textSize="18sp"
-        android:background="?attr/selectableItemBackground"
-        android:text="📋  Упражнения" />
+        android:background="?attr/selectableItemBackground">
 
-    <TextView
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_exercises"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Упражнения" />
+
+    </LinearLayout>
+
+    <!-- Тренировки -->
+    <LinearLayout
         android:id="@+id/menu_sets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="18dp"
-        android:textSize="18sp"
-        android:background="?attr/selectableItemBackground"
-        android:text="📦  Тренировки" />
+        android:background="?attr/selectableItemBackground">
 
-    <TextView
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_workouts"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Тренировки" />
+
+    </LinearLayout>
+
+    <!-- История -->
+    <LinearLayout
         android:id="@+id/menu_history"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="18dp"
-        android:textSize="18sp"
-        android:background="?attr/selectableItemBackground"
-        android:text="📜  История" />
+        android:background="?attr/selectableItemBackground">
 
-    <TextView
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_history"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="История" />
+
+    </LinearLayout>
+
+    <!-- Статистика -->
+    <LinearLayout
         android:id="@+id/menu_statistics"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:padding="18dp"
-        android:textSize="18sp"
-        android:background="?attr/selectableItemBackground"
-        android:text="📊  Статистика" />
+        android:background="?attr/selectableItemBackground">
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_statistics"
+            android:layout_marginEnd="16dp"
+            android:alpha="0.8" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Статистика" />
+
+    </LinearLayout>
 
 </LinearLayout>
