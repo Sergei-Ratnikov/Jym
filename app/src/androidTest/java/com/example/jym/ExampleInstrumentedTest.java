@@ -1,4 +1,4 @@
-package com.example.jym;
+package com.meltir.jym;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.jym", appContext.getPackageName());
+        assertEquals("com.meltir.jym", appContext.getPackageName());
     }
 }

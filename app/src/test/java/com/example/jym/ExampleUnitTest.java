@@ -1,4 +1,4 @@
-package com.example.jym;
+package com.meltir.jym;
 
 import org.junit.Test;
 

@@ -8,6 +8,15 @@
     android:gravity="center_vertical"
     android:background="?attr/selectableItemBackground">
 
+    <!-- Иконка типа упражнения -->
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="12dp"
+        android:alpha="0.7"
+        android:contentDescription="" />
+
     <!-- Блок с названием и типом -->
     <LinearLayout
         android:layout_width="0dp"
@@ -45,11 +54,11 @@
         android:padding="6dp"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        app:icon="@drawable/ic_delete"
+        app:icon="@android:drawable/ic_menu_delete"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
         app:iconSize="18dp"
-        app:iconTint="@android:color/white"
+        app:iconTint="#B3FFFFFF"
         app:backgroundTint="@color/red_delete"
         app:cornerRadius="8dp" />
 

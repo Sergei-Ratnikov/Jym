@@ -3,13 +3,13 @@ plugins {
 }
 
 android {
-    namespace 'com.example.jym'
+    namespace 'com.meltir.jym'
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId "com.example.jym"
+        applicationId "com.meltir.jym"
         minSdk 24
         targetSdk 37
         versionCode 1
@@ -43,7 +43,6 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.3.2'
 
     // === Lifecycle (для ViewModel и LiveData) ===
-    // ViewModel хранит данные экрана, чтобы они не терялись при повороте
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.7.0'
     implementation 'androidx.lifecycle:lifecycle-livedata:2.7.0'
     implementation 'androidx.lifecycle:lifecycle-runtime:2.7.0'
@@ -53,7 +52,6 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui:2.7.6'
 
     // === Room (база данных SQLite) ===
-    // Room — это надстройка над SQLite, чтобы работать с БД через Java-классы
     implementation 'androidx.room:room-runtime:2.6.1'
     annotationProcessor 'androidx.room:room-compiler:2.6.1'
 
