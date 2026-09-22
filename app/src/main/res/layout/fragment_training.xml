@@ -4,12 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <!-- Верхняя панель: подпись + название тренировки + стрелка «Сменить» -->
+    <!-- Верхняя панель -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="8dp"
         android:gravity="center_vertical">
 
         <LinearLayout
@@ -18,22 +21,22 @@
             android:layout_weight="1"
             android:orientation="vertical">
 
-            <!-- Маленькая серая подпись сверху -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Текущая тренировка"
-                android:textSize="11sp"
+                android:textSize="12sp"
                 android:alpha="0.6"
                 android:letterSpacing="0.05" />
 
-            <!-- Название тренировки -->
             <TextView
                 android:id="@+id/text_set_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="22sp"
                 android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
                 android:text="—" />
 
         </LinearLayout>
@@ -42,13 +45,16 @@
             android:id="@+id/button_change_set"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/primary_green"
-            android:text="▼ Тренировка"
-            android:textSize="14sp" />
+            android:backgroundTint="@color/primary_blue"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:minWidth="0dp"
+            android:text="▼ Сменить"
+            android:textSize="13sp" />
 
     </LinearLayout>
 
-    <!-- Строка: «Сделано в прошлый раз» + таймер справа -->
+    <!-- Строка: «Сделано в прошлый раз» + таймер -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -65,6 +71,8 @@
             android:layout_weight="1"
             android:textSize="13sp"
             android:alpha="0.7"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:text="Сделано в прошлый раз: —" />
 
         <TextView
@@ -88,6 +96,5 @@
         android:clipToPadding="false"
         android:paddingTop="8dp"
         android:paddingBottom="8dp" />
-
 
 </LinearLayout>

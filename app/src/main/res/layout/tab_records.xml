@@ -11,6 +11,7 @@
         android:padding="32dp"
         android:gravity="center"
         android:textSize="16sp"
+        android:alpha="0.6"
         android:text="Пока нет рекордов.\nЗавершите тренировку — здесь появятся лучшие результаты."
         android:visibility="gone" />
 

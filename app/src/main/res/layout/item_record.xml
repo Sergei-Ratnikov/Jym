@@ -26,6 +26,8 @@
             android:layout_height="wrap_content"
             android:textSize="16sp"
             android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end"
             android:text="Жим лежа" />
 
         <TextView
@@ -44,6 +46,7 @@
         android:layout_height="wrap_content"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:layout_marginStart="8dp"
         android:text="85 кг" />
 
 </LinearLayout>

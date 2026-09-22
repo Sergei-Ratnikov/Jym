@@ -5,8 +5,8 @@
   Внизу — общая панель:
     - Кнопка «Меню» (30% ширины, слева).
     - Пустой распорщик (20% ширины).
-    - Кнопка «Закончить тренировку» (50% ширины, справа).
-      Она видна только на экране Тренировки — управляется в MainActivity.
+    - Универсальная кнопка действия (50% ширины, справа).
+      Видна только когда фрагмент её настроит.
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -25,40 +25,36 @@
         android:id="@+id/bottom_panel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
 
         <!-- Кнопка «Меню» — 30% ширины -->
         <Button
             android:id="@+id/button_menu"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="0.30"
-            android:layout_marginStart="5dp"
+            android:layout_weight="0.3"
+            android:layout_marginStart="12dp"
             android:backgroundTint="@color/primary_blue"
             android:text="☰ Меню"
             android:textSize="15sp"
             android:paddingStart="4dp"
             android:paddingEnd="4dp" />
 
-        <!-- Распорщик — 20% ширины (пустое пространство между кнопками) -->
+        <!-- Распорщик — 20% ширины -->
         <View
             android:layout_width="0dp"
             android:layout_height="1dp"
             android:layout_weight="0.2" />
 
-
-        <!--
-          Универсальная кнопка действия справа.
-          Каждый фрагмент настраивает её под себя (текст, цвет, обработчик).
-          По умолчанию невидима.
-        -->
+        <!-- Универсальная кнопка действия справа -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button_action"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
-            android:layout_marginEnd="5dp"
-            android:backgroundTint="@color/primary_green"
+            android:layout_marginEnd="12dp"
             android:text=""
             android:textSize="14sp"
             android:paddingStart="4dp"

@@ -15,7 +15,7 @@
         android:layout_height="28dp"
         android:layout_marginEnd="12dp"
         android:alpha="0.7"
-        android:contentDescription="" />
+        android:contentDescription="@null" />
 
     <!-- Блок с названием и типом -->
     <LinearLayout
@@ -32,6 +32,8 @@
             android:textStyle="bold"
             android:paddingTop="4dp"
             android:paddingBottom="4dp"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
             android:text="Название" />
 
         <TextView
@@ -44,11 +46,12 @@
 
     </LinearLayout>
 
-    <!-- Кнопка удаления — красная, компактная, как в истории -->
+    <!-- Кнопка удаления -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_delete"
         android:layout_width="36dp"
         android:layout_height="36dp"
+        android:layout_gravity="center_vertical"
         android:minWidth="0dp"
         android:minHeight="0dp"
         android:padding="6dp"
@@ -58,7 +61,7 @@
         app:iconGravity="textStart"
         app:iconPadding="0dp"
         app:iconSize="18dp"
-        app:iconTint="#B3FFFFFF"
+        app:iconTint="#FFFFFFFF"
         app:backgroundTint="@color/red_delete"
         app:cornerRadius="8dp" />
 

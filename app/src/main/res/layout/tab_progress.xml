@@ -5,10 +5,20 @@
     android:orientation="vertical"
     android:padding="12dp">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Упражнение"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:alpha="0.7"
+        android:layout_marginBottom="4dp" />
+
     <Spinner
         android:id="@+id/spinner_exercise"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp" />
 
     <TextView
         android:id="@+id/text_progress_empty"
@@ -17,6 +27,7 @@
         android:padding="24dp"
         android:gravity="center"
         android:textSize="15sp"
+        android:alpha="0.6"
         android:text="Выберите упражнение, чтобы увидеть прогресс"
         android:visibility="gone" />
 
@@ -25,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:minHeight="200dp"
         android:layout_marginTop="8dp" />
 
 </LinearLayout>

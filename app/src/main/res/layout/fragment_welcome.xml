@@ -4,36 +4,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!--
-      Фоновая картинка на весь экран.
-      alpha="0.15" — прозрачность 15% (еле заметная).
-      Можно поднять до 0.2–0.3, если хочется виднее.
-    -->
+    <!-- Фоновая картинка -->
     <ImageView
         android:id="@+id/image_background"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="45dp"
         android:src="@drawable/coat_of_arms"
         android:scaleType="centerInside"
         android:alpha="0.05"
-        android:contentDescription="" />
+        android:contentDescription="@null" />
 
-    <!--
-      Контент поверх картинки.
-      LinearLayout с gravity="center" ставит всё по центру.
-    -->
+    <!-- Контент -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="32dp"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="32dp"
         android:gravity="center">
-
-        <Space
-            android:layout_width="340dp"
-            android:layout_height="8dp"
-            android:layout_weight="0.3" />
 
         <!-- Заголовок -->
         <TextView
@@ -44,30 +34,32 @@
             android:textSize="32sp"
             android:textStyle="bold" />
 
-
         <!-- Основной текст -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="40dp"
             android:gravity="center"
-            android:lineSpacingMultiplier="1.1"
-            android:textSize="18sp"
-            android:text="Привет!\nЭто трекер тренировок, который работает без интернета и регистрации. Создавай упражнения, собирай из них тренировки и веди историю — всё хранится только на твоём телефоне.\nНачни с раздела «Упражнения» — там уже есть начальный набор. Затем собери тренировки по себе и приступай!\n\nСоблюдает дня режим Jym!"/>
+            android:lineSpacingMultiplier="1.15"
+            android:textSize="17sp"
+            android:text="Привет!\nЭто трекер тренировок, который работает без интернета и регистрации. Создавай упражнения, собирай из них тренировки и веди историю — всё хранится только на твоём телефоне.\n\nНачни с раздела «Упражнения» — там уже есть начальный набор. Затем собери тренировки по себе и приступай!\n\nСоблюдает дня режим Jym!" />
 
+        <!-- Распорщик, прижимающий галочку и кнопку вниз -->
         <Space
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1" />
 
-        <!-- Галочка «Больше не показывать» -->
+        <!-- Галочка -->
         <CheckBox
             android:id="@+id/check_dont_show"
             android:layout_width="wrap_content"
-            android:layout_height="23dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
             android:text="Больше не показывать"
-            android:textSize="12sp" />
+            android:textSize="13sp" />
 
         <!-- Кнопка «Начать» -->
         <com.google.android.material.button.MaterialButton

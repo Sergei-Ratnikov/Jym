@@ -30,6 +30,8 @@
                 android:layout_weight="1"
                 android:textSize="14sp"
                 android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end"
                 android:text="09.09.2026  18:30 — 19:15" />
 
             <TextView
@@ -38,10 +40,11 @@
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:alpha="0.7"
+                android:maxLines="1"
                 android:layout_marginEnd="8dp"
                 android:text="(45 мин)" />
 
-            <!-- Кнопка «Копировать» — жёлтая, без текста -->
+            <!-- Кнопка «Копировать» -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_copy"
                 android:layout_width="36dp"
@@ -60,7 +63,7 @@
                 app:backgroundTint="@color/yellow_copy"
                 app:cornerRadius="8dp" />
 
-            <!-- Кнопка «Удалить» — красная, без текста -->
+            <!-- Кнопка «Удалить» -->
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_delete"
                 android:layout_width="36dp"

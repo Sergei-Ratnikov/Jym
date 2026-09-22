@@ -7,7 +7,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
         android:text="История"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -19,6 +22,7 @@
         android:padding="32dp"
         android:gravity="center"
         android:textSize="16sp"
+        android:alpha="0.6"
         android:text="Нет тренировок.\nЗавершите первую тренировку, чтобы она появилась здесь."
         android:visibility="gone" />
 

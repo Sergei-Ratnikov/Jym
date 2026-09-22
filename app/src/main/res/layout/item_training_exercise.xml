@@ -28,8 +28,9 @@
             android:id="@+id/text_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="6dp"
-            android:paddingBottom="6dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:paddingEnd="24dp"
             android:textSize="16sp"
             android:text="Название упражнения" />
 
@@ -133,7 +134,7 @@
 
         </LinearLayout>
 
-        <!-- Тип 3: время (мин:сек) + подходы -->
+        <!-- Тип 3: время (мин.:сек) + подходы -->
         <LinearLayout
             android:id="@+id/fields_type3"
             android:layout_width="match_parent"
@@ -149,12 +150,12 @@
                 android:inputType="number"
                 android:maxLength="3"
                 android:textSize="14sp"
-                android:hint="мин" />
+                android:hint="мин." />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" мин "
+                android:text=" мин. "
                 android:textSize="14sp" />
 
             <EditText
@@ -193,7 +194,7 @@
 
         </LinearLayout>
 
-        <!-- Тип 4: расстояние + время (мин:сек) + уровень -->
+        <!-- Тип 4: расстояние + время (мин.:сек) + уровень -->
         <LinearLayout
             android:id="@+id/fields_type4"
             android:layout_width="match_parent"
@@ -217,7 +218,7 @@
                 android:text=" м × "
                 android:textSize="14sp" />
 
-            <!-- 2. Время: мин + сек -->
+            <!-- 2. Время: мин. + сек -->
             <EditText
                 android:id="@+id/edit_time4_min"
                 android:layout_width="44dp"
@@ -225,12 +226,12 @@
                 android:inputType="number"
                 android:maxLength="3"
                 android:textSize="14sp"
-                android:hint="мин" />
+                android:hint="мин." />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" мин "
+                android:text=" мин. "
                 android:textSize="14sp" />
 
             <EditText
@@ -255,12 +256,12 @@
                 android:layout_height="wrap_content"
                 android:inputType="number"
                 android:textSize="14sp"
-                android:hint="ур" />
+                android:hint="ур." />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" ур"
+                android:text=" ур."
                 android:textSize="14sp" />
 
         </LinearLayout>
@@ -275,6 +276,8 @@
         android:textSize="13sp"
         android:alpha="0.7"
         android:layout_marginTop="2dp"
+        android:maxLines="3"
+        android:ellipsize="end"
         android:visibility="gone"
         android:text="80 кг × 10 × 4" />
 

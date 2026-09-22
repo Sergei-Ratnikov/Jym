@@ -3,7 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="24dp">
+    android:paddingStart="24dp"
+    android:paddingEnd="24dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="16dp">
 
     <EditText
         android:id="@+id/edit_name"
@@ -11,13 +14,22 @@
         android:layout_height="wrap_content"
         android:hint="Название"
         android:inputType="text"
-        android:maxLength="60" />
+        android:maxLength="60"
+        android:textSize="16sp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Тип упражнения:" />
+        android:layout_marginTop="20dp"
+        android:text="Тип упражнения"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.05"
+        android:alpha="0.7" />
 
     <Spinner
         android:id="@+id/spinner_type"

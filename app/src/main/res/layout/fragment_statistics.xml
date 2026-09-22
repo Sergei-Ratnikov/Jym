@@ -8,7 +8,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="12dp"
         android:text="Статистика"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -17,7 +20,11 @@
         android:id="@+id/tabs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabMode="fixed">
+        android:layout_marginTop="4dp"
+        app:tabMode="fixed"
+        app:tabIndicatorColor="@color/primary_blue"
+        app:tabSelectedTextColor="@color/primary_blue"
+        app:tabTextColor="@color/black">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

@@ -13,12 +13,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="18dp"
+        android:padding="16dp"
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:src="@drawable/ic_training"
             android:layout_marginEnd="16dp"
             android:alpha="0.8" />
@@ -38,12 +38,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="18dp"
+        android:padding="16dp"
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:src="@drawable/ic_exercises"
             android:layout_marginEnd="16dp"
             android:alpha="0.8" />
@@ -63,12 +63,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="18dp"
+        android:padding="16dp"
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:src="@drawable/ic_workouts"
             android:layout_marginEnd="16dp"
             android:alpha="0.8" />
@@ -88,12 +88,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="18dp"
+        android:padding="16dp"
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:src="@drawable/ic_history"
             android:layout_marginEnd="16dp"
             android:alpha="0.8" />
@@ -113,12 +113,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:padding="18dp"
+        android:padding="16dp"
         android:background="?attr/selectableItemBackground">
 
         <ImageView
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:src="@drawable/ic_statistics"
             android:layout_marginEnd="16dp"
             android:alpha="0.8" />

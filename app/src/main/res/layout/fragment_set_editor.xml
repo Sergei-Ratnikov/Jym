@@ -14,8 +14,8 @@
 
         <ImageButton
             android:id="@+id/button_back"
-            android:layout_width="44dp"
-            android:layout_height="44dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
             android:contentDescription="Сохранить и выйти" />
@@ -25,6 +25,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:importantForAutofill="no"
             android:hint="Название тренировки"
             android:textSize="20sp"
             android:textStyle="bold"

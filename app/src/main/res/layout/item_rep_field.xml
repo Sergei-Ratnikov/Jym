@@ -18,9 +18,9 @@
 
     <ImageButton
         android:id="@+id/button_remove_rep"
-        android:layout_width="24dp"
-        android:layout_height="24dp"
-        android:padding="2dp"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:padding="6dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:src="@android:drawable/ic_menu_close_clear_cancel"
         android:contentDescription="Удалить подход"

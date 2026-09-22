@@ -5,9 +5,10 @@
     android:layout_height="wrap_content"
     android:paddingStart="16dp"
     android:paddingEnd="16dp"
-    android:paddingTop="20dp"
+    android:paddingTop="24dp"
     android:paddingBottom="8dp"
-    android:textSize="20sp"
+    android:textSize="22sp"
     android:textStyle="bold"
-    android:alpha="0.85"
+    android:alpha="0.7"
+    android:letterSpacing="0.05"
     android:text="СЕНТЯБРЬ 2026" />

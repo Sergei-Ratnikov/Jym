@@ -3,8 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingTop="2dp"
-    android:paddingBottom="2dp">
+    android:paddingTop="3dp"
+    android:paddingBottom="3dp"
+    android:baselineAligned="true">
 
     <TextView
         android:id="@+id/text_marker"
@@ -19,6 +20,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:textSize="14sp"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
         android:text="Жим лежа" />
 
     <TextView
@@ -27,6 +30,10 @@
         android:layout_height="wrap_content"
         android:textSize="13sp"
         android:alpha="0.7"
+        android:inputType="textMultiLine"
+        android:maxLines="3"
+        android:layout_marginStart="8dp"
+        android:gravity="end"
         android:text="80 кг × 10 × 4" />
 
 </LinearLayout>
